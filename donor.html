@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donor Portal - HopeServe</title>
+    <link rel="stylesheet" href="donor.css">
+</head>
+<body>
+    <div class="layout">
+        <!-- Vertical Sidebar -->
+        <aside class="sidebar">
+            <h2>HopeServe</h2>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="donor.html" class="active">Donor Portal</a></li>
+                    <li><a href="recipient.html">Recipient Portal</a></li>
+                    <li><a href="driver.html">Driver Portal</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="form-container">
+                <h2>Donor Portal</h2>
+                <h3>Upcoming Scheduled Donations</h3>
+                <p>Fill in the details below to donate your surplus food.</p>
+
+                <!-- Donation Form (no submit button) -->
+                <form id="donationForm" method="POST">
+                    <label for="food-name">Food Name:</label>
+                    <input type="text" id="food-name" name="food-name" required>
+
+                    <label for="quantity">Quantity (in kg):</label>
+                    <input type="number" id="quantity" name="quantity" required>
+
+                    <label for="expiry">Expiry Date:</label>
+                    <input type="date" id="expiry" name="expiry" required>
+
+                    <label for="address">Pickup Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </form>
+
+                <!-- Recipient Portal Button -->
+                <form id="recipientForm" action="recipient.html" method="get">
+                    <button type="submit">submit</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(function(error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+        }
+    </script>
+<script src="donor.js"></script>
+</body>
+</html>

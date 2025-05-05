@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Donate Food</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="donate-container">
+        <h2>Donate Food</h2>
+        <form action="server/donate.php" method="POST">
+            <input type="text" name="food_details" placeholder="Describe the food" required>
+            <input type="text" name="location" placeholder="Pickup location" required>
+            <button type="submit">Submit Donation</button>
+        </form>
+        <a href="donor_dashboard.html">Back to Dashboard</a>
+    </div>
+</body>
+</html>

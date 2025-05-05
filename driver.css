@@ -1,0 +1,149 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f6f8;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.navbar {
+  width: 220px;
+  background-color: #2e7d32;
+  color: white;
+  padding: 20px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  width: 100%;
+}
+
+.nav-links li {
+  margin-bottom: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background-color: #388e3c;
+}
+
+/* Logout Button */
+#logoutBtn {
+  margin-top: auto;
+  color: white;
+  text-decoration: none;
+  background-color: #c62828;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* Main Content */
+.driver-container {
+  flex: 1;
+  padding: 30px;
+}
+
+/* Header */
+header {
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 28px;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+/* Dashboard Stats */
+.dashboard-stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.stat-box {
+  background-color: white;
+  border-left: 5px solid #4CAF50;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex: 1 1 200px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.stat-box i {
+  font-size: 28px;
+  color: #4CAF50;
+}
+
+.stat-box h3 {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.stat-box p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Pickup Section */
+.pickup-section, .route-section {
+  margin-bottom: 30px;
+}
+
+.pickup-section h2, .route-section h2 {
+  color: #2e7d32;
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pickup-card {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-left: 4px solid #4CAF50;
+}
+
+/* Map Embed */
+.route-section iframe {
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+  border: 0;
+}
